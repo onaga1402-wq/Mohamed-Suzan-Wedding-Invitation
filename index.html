@@ -1,0 +1,1946 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>محمد & سوزان | Wedding Invitation</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+    <style>
+      /* =========================================================
+   RESET
+========================================================= */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+
+       font-family: "Great Vibes", cursive;
+
+        background: #fff7f4;
+
+        color: #5b4140;
+
+        overflow-x: hidden;
+      }
+
+      body.lock {
+        overflow: hidden;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button {
+        font-family: inherit;
+      }
+
+      /* =========================================================
+   COLORS
+========================================================= */
+
+      :root {
+        --pink: #e7aaa5;
+
+        --pink-light: #f4ccc6;
+
+        --pink-soft: #fae2dc;
+
+        --rose: #bc7477;
+
+        --rose-dark: #94565d;
+
+        --cream: #fff8f5;
+
+        --cream-dark: #f7e9e3;
+
+        --gold: #c79a70;
+
+        --gold-light: #e4bd98;
+
+        --text: #5b4140;
+      }
+
+      /* =========================================================
+   OPENING SCREEN
+========================================================= */
+
+      .opening {
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 99999;
+
+        overflow: hidden;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+            background:
+          linear-gradient(rgba(67, 35, 34, 0.28), rgba(55, 29, 29, 0.58)),
+          url("image/loading-back-round.jpeg") center center / cover no-repeat;
+      
+
+        transition:
+          opacity 1.2s ease,
+          visibility 1.2s ease;
+      }
+
+      .opening.hide {
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+      }
+
+      /* =========================================================
+   SOFT LIGHT
+========================================================= */
+
+      .light {
+        position: absolute;
+
+        width: 350px;
+        height: 350px;
+
+        border-radius: 50%;
+
+        background: rgba(255, 222, 214, 0.25);
+
+        filter: blur(80px);
+
+        pointer-events: none;
+      }
+
+      .light.one {
+        top: -130px;
+        right: -100px;
+      }
+
+      .light.two {
+        bottom: -150px;
+        left: -100px;
+      }
+
+      /* =========================================================
+   DECORATIVE FLOWERS
+========================================================= */
+
+      .flower {
+        position: absolute;
+
+        pointer-events: none;
+
+        opacity: 0.95;
+      }
+
+      /* top left */
+
+      .flower.left-top {
+        width: 310px;
+        height: 310px;
+
+        left: -75px;
+        top: -60px;
+
+        background:
+          radial-gradient(
+            ellipse at 35% 35%,
+            #ffe5e1 0 10%,
+            #e79794 11% 19%,
+            transparent 20%
+          ),
+          radial-gradient(
+            ellipse at 65% 27%,
+            #ffd8d3 0 9%,
+            #d98286 10% 18%,
+            transparent 19%
+          ),
+          radial-gradient(
+            ellipse at 35% 70%,
+            #f8cbc6 0 10%,
+            #d77e82 11% 19%,
+            transparent 20%
+          );
+      }
+
+      /* top right */
+
+      .flower.right-top {
+        width: 270px;
+        height: 300px;
+
+        right: -60px;
+        top: 80px;
+
+        background:
+          radial-gradient(
+            ellipse at 50% 35%,
+            #ffe4df 0 10%,
+            #db8b8d 11% 19%,
+            transparent 20%
+          ),
+          radial-gradient(
+            ellipse at 25% 65%,
+            #f9d1cc 0 10%,
+            #d78487 11% 18%,
+            transparent 19%
+          );
+      }
+
+      /* bottom left */
+
+      .flower.left-bottom {
+        width: 320px;
+        height: 320px;
+
+        left: -90px;
+        bottom: -80px;
+
+        background:
+          radial-gradient(
+            ellipse at 50% 40%,
+            #ffe2de 0 11%,
+            #dc8a8c 12% 20%,
+            transparent 21%
+          ),
+          radial-gradient(
+            ellipse at 75% 75%,
+            #f6cbc6 0 10%,
+            #d67e82 11% 19%,
+            transparent 20%
+          );
+      }
+
+      /* bottom right */
+
+      .flower.right-bottom {
+        width: 320px;
+        height: 330px;
+
+        right: -90px;
+        bottom: -60px;
+
+        background:
+          radial-gradient(
+            ellipse at 40% 40%,
+            #ffe4df 0 10%,
+            #dc898b 11% 19%,
+            transparent 20%
+          ),
+          radial-gradient(
+            ellipse at 70% 70%,
+            #f8d0ca 0 11%,
+            #d98487 12% 20%,
+            transparent 21%
+          );
+      }
+
+      /* =========================================================
+   PETALS
+========================================================= */
+
+      .petal {
+        position: absolute;
+
+        width: 25px;
+        height: 14px;
+
+        border-radius: 100% 0 100% 0;
+
+        background: linear-gradient(135deg, #ffe5e1, #df9091);
+
+        opacity: 0.8;
+
+        animation: floatingPetal 8s ease-in-out infinite;
+      }
+
+      .p1 {
+        top: 13%;
+        right: 18%;
+      }
+
+      .p2 {
+        top: 31%;
+        left: 10%;
+
+        animation-delay: 2s;
+      }
+
+      .p3 {
+        top: 54%;
+        right: 8%;
+
+        animation-delay: 4s;
+      }
+
+      .p4 {
+        bottom: 19%;
+        left: 20%;
+
+        animation-delay: 1s;
+      }
+
+      .p5 {
+        bottom: 12%;
+        right: 25%;
+
+        animation-delay: 3s;
+      }
+
+      @keyframes floatingPetal {
+        0%,
+        100% {
+          transform: translateY(0) rotate(35deg);
+        }
+
+        50% {
+          transform: translateY(-25px) rotate(70deg);
+        }
+      }
+
+      /* =========================================================
+   OPENING CONTENT
+========================================================= */
+
+      .opening-content {
+        width: 100%;
+        height: 100%;
+
+        position: relative;
+
+        z-index: 10;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        padding: clamp(45px, 8vh, 85px) 20px 20px;
+      }
+
+      /* =========================================================
+   OPENING TEXT
+========================================================= */
+
+      .special {
+        color: white;
+
+          font-family: "Cormorant", serif;
+
+        font-size: clamp(10px, 2.5vw, 16px);
+
+        letter-spacing: 7px;
+
+        margin-bottom: 18px;
+
+        text-shadow: 0 3px 15px rgba(70, 30, 30, 0.25);
+      }
+
+      .title-line {
+        display: flex;
+
+        align-items: center;
+
+        gap: 13px;
+
+        margin-bottom: 20px;
+      }
+
+      .title-line span {
+        width: 90px;
+        height: 1px;
+
+        background: rgba(255, 255, 255, 0.75);
+      }
+
+      .title-heart {
+        color: white;
+
+        font-size: 18px;
+      }
+
+      .beginning {
+        color: white;
+
+        font-family: "Playfair Display", serif;
+
+        font-size: clamp(32px, 6vw, 58px);
+
+        font-weight: 400;
+
+        line-height: 1.2;
+
+        text-shadow: 0 4px 18px rgba(70, 30, 30, 0.2);
+
+        margin-bottom: clamp(35px, 6vh, 65px);
+      }
+
+      /* =========================================================
+   ENVELOPE AREA
+========================================================= */
+
+      .envelope-area {
+        position: relative;
+
+        width: min(560px, 90vw);
+
+        display: flex;
+
+        justify-content: center;
+      }
+
+      .envelope-shadow {
+        position: absolute;
+
+        width: 75%;
+
+        height: 40px;
+
+        bottom: -20px;
+
+        left: 12.5%;
+
+        background: rgba(80, 40, 37, 0.28);
+
+        filter: blur(22px);
+
+        border-radius: 50%;
+      }
+
+      /* =========================================================
+   ENVELOPE
+========================================================= */
+
+      .envelope {
+        position: relative;
+
+        width: min(560px, 88vw);
+
+        aspect-ratio: 1.55 / 1;
+
+        cursor: pointer;
+
+        perspective: 1400px;
+
+        transition: transform 0.5s ease;
+      }
+
+      .envelope:hover {
+        transform: translateY(-4px);
+      }
+
+      /* =========================================================
+   ENVELOPE BACK
+========================================================= */
+
+      .envelope-back {
+        position: absolute;
+
+        inset: 0;
+
+        z-index: 1;
+
+        border-radius: 5px;
+
+        background: linear-gradient(145deg, #f5d6ce, #e5b0aa);
+
+        box-shadow: 0 25px 40px rgba(75, 35, 32, 0.22);
+
+        overflow: hidden;
+      }
+
+      .envelope-back::after {
+        content: "";
+
+        position: absolute;
+
+        inset: 0;
+
+        background: repeating-linear-gradient(
+          0deg,
+          transparent 0,
+          transparent 3px,
+          rgba(90, 40, 40, 0.04) 4px
+        );
+      }
+
+      /* =========================================================
+   CARD INSIDE ENVELOPE
+========================================================= */
+
+      .invitation-card {
+        position: absolute;
+
+        left: 8%;
+
+        top: 8%;
+
+        width: 84%;
+
+        height: 84%;
+
+        z-index: 2;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+
+        background: linear-gradient(145deg, #fffefd, #fff4ef);
+
+        border: 1px solid rgba(180, 125, 115, 0.35);
+
+        box-shadow: 0 18px 45px rgba(70, 35, 32, 0.3);
+
+        color: #7f5652;
+
+        opacity: 0;
+
+        transform: translateY(0) scale(0.96);
+
+        pointer-events: none;
+
+        transition:
+          transform 1.5s cubic-bezier(0.16, 0.75, 0.2, 1),
+          opacity 0.5s ease;
+      }
+
+      /*
+    IMPORTANT:
+    الكارت مخفي تمامًا هنا
+*/
+
+      .envelope.open .invitation-card {
+        opacity: 1;
+
+        z-index: 30;
+
+        transform: translateY(-115%) scale(1);
+
+        transition-delay: 0.35s;
+      }
+
+      /* card text */
+
+      .card-small {
+        font-family: "Playfair Display", serif;
+
+        font-size: 10px;
+
+        letter-spacing: 4px;
+
+        color: #b78675;
+
+        margin-bottom: 14px;
+      }
+
+      .card-names {
+        font-family: "Playfair Display", serif;
+
+        font-size: 28px;
+
+        color: #7d5350;
+      }
+
+      .card-names span {
+        color: #c89976;
+
+        margin: 0 8px;
+      }
+
+      .card-date {
+        margin-top: 14px;
+
+        font-size: 13px;
+
+        color: #906963;
+      }
+
+      .card-place {
+        margin-top: 5px;
+
+        font-size: 11px;
+
+        color: #ae8378;
+      }
+
+      /* =========================================================
+   ENVELOPE FOLDS
+========================================================= */
+
+      .envelope-left {
+        position: absolute;
+
+        inset: 0;
+
+        z-index: 5;
+
+        background: #e5b4af;
+
+        clip-path: polygon(0 0, 50% 50%, 0 100%);
+      }
+
+      .envelope-right {
+        position: absolute;
+
+        inset: 0;
+
+        z-index: 5;
+
+        background: #efc5be;
+
+        clip-path: polygon(100% 0, 50% 50%, 100% 100%);
+      }
+
+      .envelope-bottom {
+        position: absolute;
+
+        inset: 0;
+
+        z-index: 6;
+
+        background: linear-gradient(135deg, #dfa7a4, #efc5bd);
+
+        clip-path: polygon(0 100%, 50% 45%, 100% 100%);
+      }
+
+      /* =========================================================
+   ENVELOPE FLAP
+========================================================= */
+
+      .envelope-flap {
+        position: absolute;
+
+        inset: 0;
+
+        z-index: 9;
+
+        background: linear-gradient(145deg, #f7d9d1, #e5afa9);
+
+        clip-path: polygon(0 0, 100% 0, 50% 59%);
+
+        transform-origin: top center;
+
+        transition: transform 1.25s cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+
+      .envelope.open .envelope-flap {
+        transform: rotateX(180deg);
+      }
+
+      /* =========================================================
+   WAX SEAL
+========================================================= */
+
+      .seal {
+        position: absolute;
+
+        left: 50%;
+
+        top: 51%;
+
+        width: 76px;
+
+        height: 76px;
+
+        z-index: 20;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        transform: translate(-50%, -50%);
+
+        border-radius: 50%;
+
+        color: #fff2e8;
+
+        font-size: 30px;
+
+        background: radial-gradient(
+          circle at 30% 25%,
+          #f3d4bd,
+          #d09a7d 43%,
+          #b76e61 70%,
+          #94544e
+        );
+
+        border: 3px solid rgba(255, 240, 226, 0.5);
+
+        box-shadow:
+          0 8px 25px rgba(75, 35, 32, 0.25),
+          inset 0 0 0 2px rgba(255, 255, 255, 0.15);
+
+        transition:
+          opacity 0.5s ease,
+          transform 0.7s ease;
+      }
+
+      .envelope.open .seal {
+        opacity: 0;
+
+        transform: translate(-50%, -50%) scale(1.8);
+      }
+
+      /* =========================================================
+   OPEN INSTRUCTION
+========================================================= */
+
+      .open-instruction {
+        color: white;
+
+        margin-top: clamp(30px, 6vh, 65px);
+
+        font-size: 15px;
+
+        text-shadow: 0 3px 15px rgba(70, 30, 30, 0.3);
+      }
+
+      .open-divider {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 12px;
+
+        margin-bottom: 12px;
+      }
+
+      .open-divider span {
+        width: 60px;
+
+        height: 1px;
+
+        background: rgba(255, 255, 255, 0.75);
+      }
+
+      .open-divider b {
+        font-size: 15px;
+      }
+
+      .arrow {
+        width: 14px;
+
+        height: 14px;
+
+        border-right: 1px solid white;
+
+        border-bottom: 1px solid white;
+
+        transform: rotate(45deg);
+
+        margin: 13px auto 0;
+
+        animation: arrowAnimation 1.5s infinite;
+      }
+
+      @keyframes arrowAnimation {
+        0%,
+        100% {
+          transform: translateY(0) rotate(45deg);
+        }
+
+        50% {
+          transform: translateY(7px) rotate(45deg);
+        }
+      }
+
+      /* =========================================================
+   MAIN WEBSITE
+========================================================= */
+
+      .website {
+        opacity: 0;
+
+        visibility: hidden;
+
+        transition: opacity 1s ease;
+      }
+
+      .website.show {
+        opacity: 1;
+
+        visibility: visible;
+      }
+
+      /* =========================================================
+   NAVBAR
+========================================================= */
+
+      .navbar {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+
+        z-index: 30;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        padding: 22px 6%;
+      }
+
+      .logo {
+        color: white;
+
+        font-family: "Playfair Display", serif;
+
+        font-size: 14px;
+      }
+
+      .nav-links {
+        display: flex;
+
+        gap: 28px;
+
+        font-size: 11px;
+      }
+
+      .nav-links a {
+        color: white;
+
+        transition: 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #e7c09d;
+      }
+
+      /* =========================================================
+   HERO
+========================================================= */
+
+      .hero {
+        min-height: 100vh;
+
+        position: relative;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+
+        overflow: hidden;
+
+        /*
+       هنا صورة الـHero
+    */
+
+        background:
+          linear-gradient(rgba(67, 35, 34, 0.28), rgba(55, 29, 29, 0.58)),
+          url("image/hero-1.jpeg") center center / cover no-repeat;
+      }
+
+      /*
+    Soft rose overlay
+*/
+
+      .hero::before {
+        content: "";
+
+        position: absolute;
+
+        inset: 0;
+
+        background: radial-gradient(
+          circle at center,
+          rgba(246, 198, 187, 0.1),
+          transparent 45%
+        );
+
+        pointer-events: none;
+      }
+
+      .hero-content {
+        position: relative;
+
+        z-index: 3;
+
+        padding: 100px 20px 60px;
+      }
+
+      .eyebrow {
+        color: #efd3b7;
+
+        font-family: "Playfair Display", serif;
+
+        font-size: 10px;
+
+        letter-spacing: 5px;
+
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        color: white;
+
+ font-family: "Great Vibes", cursive;
+        font-size: clamp(45px, 9vw, 78px);
+
+        font-weight: 400;
+
+        line-height: 1;
+      }
+
+      .hero-amp {
+        color: #e8c09c;
+
+        font-size: 30px;
+
+        margin: 9px 0;
+      }
+
+      .hero-description {
+        color: white;
+
+        font-size: 13px;
+
+        margin-top: 22px;
+      }
+
+      .hero-date {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 20px;
+
+        margin-top: 25px;
+      }
+
+      .date-day {
+        color: #e7bd98;
+
+        font-family: "Playfair Display", serif;
+
+        font-size: 58px;
+      }
+
+      .date-info {
+        color: white;
+
+        font-size: 12px;
+
+        line-height: 1.8;
+
+        text-align: right;
+      }
+
+      .hero-time {
+        color: white;
+
+        font-size: 12px;
+
+        margin-top: 12px;
+      }
+
+      .gold-line {
+        width: 100px;
+
+        height: 1px;
+
+        background: #d5ac82;
+
+        margin: 18px auto;
+      }
+
+      .hero-heart {
+        color: #e7bd98;
+
+        font-size: 17px;
+      }
+
+      /* =========================================================
+   SPECIAL DAY
+========================================================= */
+
+      .special-day {
+        background:
+          radial-gradient(
+            circle at 0% 50%,
+            rgba(225, 172, 164, 0.18),
+            transparent 25%
+          ),
+          radial-gradient(
+            circle at 100% 50%,
+            rgba(225, 172, 164, 0.18),
+            transparent 25%
+          ),
+          #fff8f5;
+
+        color: #604744;
+
+        text-align: center;
+      }
+
+      .special-inner {
+        width: min(850px, 90%);
+
+        margin: auto;
+
+        padding: 75px 20px;
+      }
+
+      .section-label {
+        font-family: "Playfair Display", serif;
+
+        color: #b58a6d;
+
+        font-size: 9px;
+
+        letter-spacing: 5px;
+
+        margin-bottom: 12px;
+      }
+
+      .special-title {
+        font-size: 26px;
+
+        margin-bottom: 18px;
+      }
+
+      .special-text {
+        max-width: 530px;
+
+        margin: auto;
+
+        color: #806d67;
+
+        font-size: 13px;
+
+        line-height: 2.2;
+      }
+
+      .names {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 25px;
+
+        margin-top: 28px;
+
+        font-size: 23px;
+      }
+
+      .names span {
+        color: #c29472;
+      }
+
+      /* =========================================================
+   COUNTDOWN
+========================================================= */
+
+      .countdown {
+        min-height: 330px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+
+        background:
+          linear-gradient(rgba(95, 48, 49, 0.55), rgba(73, 35, 36, 0.78)),
+          url("image/countdown-1.jfif") center / cover no-repeat;
+      }
+
+      .countdown-inner {
+        padding: 70px 15px;
+      }
+
+      .countdown-title {
+        color: white;
+
+        font-family: "Playfair Display", serif;
+
+        font-size: 25px;
+
+        font-weight: 400;
+
+        margin-bottom: 28px;
+      }
+
+      .timer {
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 10px;
+
+        direction: ltr;
+
+        flex-wrap: wrap;
+      }
+
+      .time-box {
+        width: 78px;
+
+        height: 70px;
+
+        border: 1px solid rgba(227, 188, 151, 0.7);
+
+        border-radius: 5px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .time-box strong {
+        color: #f0d1b0;
+
+        font-family: "Playfair Display", serif;
+
+        font-size: 23px;
+
+        font-weight: 400;
+      }
+
+      .time-box small {
+        color: white;
+
+        font-size: 9px;
+      }
+
+      /* =========================================================
+   GALLERY
+========================================================= */
+
+      .memories {
+        background:
+          radial-gradient(circle at 10% 30%, #f7ddd8, transparent 18%),
+          radial-gradient(circle at 90% 70%, #f7ddd8, transparent 18%), #fff8f5;
+
+        padding: 75px 6%;
+      }
+
+      .memories-header {
+        text-align: center;
+
+        color: #604744;
+
+        margin-bottom: 35px;
+      }
+
+      .memories-title {
+        font-size: 25px;
+      }
+
+      .gallery {
+        width: min(1050px, 100%);
+
+        margin: auto;
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 14px;
+      }
+
+      .gallery-item {
+        height: 230px;
+
+        overflow: hidden;
+
+        border-radius: 5px;
+
+        background: #ead5cf;
+      }
+
+      .gallery-item img {
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+
+        transition: 0.7s;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.06);
+      }
+
+      /* =========================================================
+   DETAILS
+========================================================= */
+
+      .details {
+        padding: 80px 6%;
+
+        text-align: center;
+
+        color: white;
+
+        background:
+          linear-gradient(rgba(92, 46, 48, 0.55), rgba(66, 31, 33, 0.8)),
+          url("image/details-1.jfif") center / cover no-repeat;
+      }
+
+      .details-title {
+        font-family: "Playfair Display", serif;
+
+        font-size: 28px;
+
+        font-weight: 400;
+
+        margin-bottom: 45px;
+      }
+
+      .details-grid {
+        width: min(950px, 100%);
+
+        margin: auto;
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 25px;
+      }
+
+      .detail-icon {
+        font-size: 25px;
+
+        color: #e3bd96;
+
+        margin-bottom: 13px;
+      }
+
+      .detail h3 {
+        font-size: 14px;
+
+        margin-bottom: 6px;
+      }
+
+      .detail p {
+        color: #eee;
+
+        font-size: 12px;
+
+        line-height: 1.8;
+      }
+
+      /* =========================================================
+   MAP
+========================================================= */
+
+      .map-button {
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 10px;
+
+        margin-top: 40px;
+
+        padding: 13px 25px;
+
+        border-radius: 30px;
+
+        background: linear-gradient(135deg, #d9ae84, #bb876c);
+
+        color: white;
+
+        font-size: 12px;
+
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+        transition: 0.3s;
+      }
+
+      .map-button:hover {
+        transform: translateY(-3px);
+      }
+
+      /* =========================================================
+   FINAL
+========================================================= */
+
+      .final {
+        min-height: 430px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+
+        background:
+          linear-gradient(rgba(91, 45, 47, 0.48), rgba(64, 31, 32, 0.72)),
+          url("images/final.jpg") center / cover no-repeat;
+      }
+
+      .final-content {
+        padding: 80px 20px;
+      }
+
+      .final-small {
+        color: #e8c6a5;
+
+        font-family: "Playfair Display", serif;
+
+        font-size: 9px;
+
+        letter-spacing: 4px;
+
+        margin-bottom: 15px;
+      }
+
+      .final h2 {
+        color: white;
+
+        font-size: 26px;
+
+        margin-bottom: 12px;
+      }
+
+      .final p {
+        color: #f5e8e3;
+
+        font-size: 13px;
+
+        line-height: 2;
+      }
+
+      .final-names {
+        color: #e7c09d;
+
+        font-family: "Playfair Display", serif;
+
+        font-size: 21px;
+
+        margin-top: 24px;
+      }
+
+      /* =========================================================
+   FOOTER
+========================================================= */
+
+      footer {
+        background: #281a1a;
+
+        color: #cbbcb6;
+
+        text-align: center;
+
+        padding: 22px;
+
+        font-size: 9px;
+      }
+
+      footer span {
+        color: #d7a68b;
+      }
+
+      /* =========================================================
+   MOBILE
+========================================================= */
+
+      @media (max-width: 700px) {
+        .nav-links {
+          display: none;
+        }
+
+        .navbar {
+          justify-content: center;
+        }
+
+        .opening-content {
+          padding-top: 6vh;
+        }
+
+        .special {
+          font-size: 9px;
+
+          letter-spacing: 5px;
+        }
+
+        .beginning {
+          font-size: 34px;
+        }
+
+        .envelope {
+          width: 88vw;
+        }
+
+        .seal {
+          width: 63px;
+
+          height: 63px;
+
+          font-size: 23px;
+        }
+
+        .open-instruction {
+          margin-top: 5vh;
+
+          font-size: 13px;
+        }
+
+        .hero h1 {
+          font-size: 47px;
+        }
+
+        .gallery {
+          grid-template-columns: 1fr;
+        }
+
+        .gallery-item {
+          height: 240px;
+        }
+
+        .details-grid {
+          grid-template-columns: 1fr;
+
+          gap: 28px;
+        }
+
+        .time-box {
+          width: 70px;
+
+          height: 65px;
+        }
+      }
+
+      @media (max-width: 390px) {
+        .special {
+          font-size: 8px;
+
+          letter-spacing: 4px;
+        }
+
+        .beginning {
+          font-size: 30px;
+        }
+
+        .open-instruction {
+          font-size: 12px;
+        }
+
+        .hero h1 {
+          font-size: 42px;
+        }
+
+        .time-box {
+          width: 65px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="lock">
+    <!-- =====================================================
+     OPENING SCREEN
+===================================================== -->
+
+    <section class="opening" id="opening">
+      <div class="light one"></div>
+
+      <div class="light two"></div>
+
+
+      <!-- Petals -->
+
+      <div class="petal p1"></div>
+
+      <div class="petal p2"></div>
+
+      <div class="petal p3"></div>
+
+      <div class="petal p4"></div>
+
+      <div class="petal p5"></div>
+
+      <div class="opening-content">
+        <div class="special">A SPECIAL INVITATION</div>
+
+        <div class="title-line">
+          <span></span>
+
+          <div class="title-heart">♥</div>
+
+          <span></span>
+        </div>
+
+        <div class="beginning">A beautiful beginning</div>
+
+        <!-- =================================================
+             ENVELOPE
+        ================================================= -->
+
+        <div class="envelope-area">
+          <div class="envelope-shadow"></div>
+
+          <div class="envelope" id="envelope">
+            <!-- =================================================
+                     CARD INSIDE
+
+                     مخفي بالكامل قبل الضغط
+                ================================================= -->
+
+            <div class="invitation-card">
+              <div class="card-small">WEDDING INVITATION</div>
+
+              <div class="card-names">
+                <span>Mohamed</span>
+
+                <span> & </span>
+
+                <span>Suzan</span>
+              </div>
+
+              <div class="card-date">9 أكتوبر 2026</div>
+            </div>
+
+            <!-- Envelope -->
+
+            <div class="envelope-back"></div>
+
+            <div class="envelope-left"></div>
+
+            <div class="envelope-right"></div>
+
+            <div class="envelope-bottom"></div>
+
+            <!-- Top flap -->
+
+            <div class="envelope-flap"></div>
+
+            <!-- Seal -->
+
+            <div class="seal">♡</div>
+          </div>
+        </div>
+
+        <!-- Open text -->
+
+        <div class="open-instruction">
+          <div class="open-divider">
+            <span></span>
+
+            <b> ♥ </b>
+
+            <span></span>
+          </div>
+
+          اضغط لفتح الدعوة
+
+          <div class="arrow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     MAIN WEBSITE
+===================================================== -->
+
+    <main class="website" id="website">
+      <!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+      <nav class="navbar">
+        <div class="logo">♡ محمد & سوزان</div>
+
+        <div class="nav-links">
+          <a href="#home"> الرئيسية </a>
+
+          <a href="#details"> تفاصيل الفرح </a>
+
+          <a href="#memories"> معرض الصور </a>
+
+          <a href="#location"> الموقع </a>
+        </div>
+      </nav>
+
+      <!-- =====================================================
+     HERO
+===================================================== -->
+
+      <section class="hero" id="home">
+      <div class="hero-container">
+          <div class="hero-content">
+          <div class="eyebrow">WEDDING INVITATION</div>
+
+          <h1>Mohamed</h1>
+
+          <div class="hero-amp">&</div>
+
+          <h1>Suzan</h1>
+
+          <p class="hero-description">
+            يسعدنا دعوتكم لمشاركتنا أجمل لحظات حياتنا
+          </p>
+
+          <div class="hero-date">
+            <div class="date-day">09</div>
+
+            <div class="date-info">
+              أكتوبر
+
+              <br />
+
+              2026
+            </div>
+          </div>
+
+          <div class="hero-time">9:00pm مساءً</div>
+          </div>
+
+          <div class="gold-line"></div>
+
+          <div class="hero-heart">♥</div>
+        </div>
+      </div>
+      </section>
+
+      <!-- =====================================================
+     SPECIAL DAY
+===================================================== -->
+
+      <section class="special-day">
+        <div class="special-inner">
+          <div class="section-label">OUR SPECIAL DAY</div>
+
+          <h2 class="special-title">بسم الله الرحمن الرحيم</h2>
+
+          <p class="special-text">
+            بكل الحب والسعادة ندعوكم لمشاركتنا فرحتنا
+
+            <br />
+
+            في ليلة من أجمل ليالي العمر
+          </p>
+
+          <div class="names">
+            <strong> محمد </strong>
+
+            <span> ♥ </span>
+
+            <strong> سوزان </strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     COUNTDOWN
+===================================================== -->
+
+      <section class="countdown">
+        <div class="countdown-inner">
+          <div class="section-label" style="color: #dfbd9b">COUNTDOWN</div>
+
+          <h2 class="countdown-title">الفرح قرب</h2>
+
+          <div class="timer">
+            <div class="time-box">
+              <strong id="days"> 00 </strong>
+
+              <small> يوم </small>
+            </div>
+
+            <div class="time-box">
+              <strong id="hours"> 00 </strong>
+
+              <small> ساعة </small>
+            </div>
+
+            <div class="time-box">
+              <strong id="minutes"> 00 </strong>
+
+              <small> دقيقة </small>
+            </div>
+
+            <div class="time-box">
+              <strong id="seconds"> 00 </strong>
+
+              <small> ثانية </small>
+            </div>
+          </div>
+
+          <div class="hero-heart" style="margin-top: 20px">♥</div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     MEMORIES
+===================================================== -->
+
+      <section class="memories" id="memories">
+        <div class="memories-header">
+          <div class="section-label">OUR MEMORIES</div>
+
+          <h2 class="memories-title">The groom and the bride</h2>
+        </div>
+
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="image/gallary-1 (2).jpeg" alt="محمد وسوزان" />
+          </div>
+
+          <div class="gallery-item">
+            <img src="image/gallary-2.jpeg" alt="محمد وسوزان" />
+          </div>
+
+          <div class="gallery-item">
+            <img src="image/gallary-3.jpeg" alt="محمد وسوزان" />
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     DETAILS
+===================================================== -->
+
+      <section class="details" id="details">
+        <div class="section-label" style="color: #dfbd9b">THE WEDDING</div>
+
+        <h2 class="details-title">About that day</h2>
+
+        <div class="details-grid">
+          <div class="detail">
+            <div class="detail-icon">♡</div>
+
+            <h3>التاريخ</h3>
+
+            <p>9 أكتوبر 2026</p>
+          </div>
+
+          <div class="detail">
+            <div class="detail-icon">◷</div>
+
+            <h3>الوقت</h3>
+
+            <p>9:00pm</p>
+          </div>
+
+          <div class="detail">
+            <div class="detail-icon">♧</div>
+
+            <h3>المكان</h3>
+
+            <p>قاعة Golden View</p>
+          </div>
+        </div>
+
+        <div id="location">
+          <a
+            class="map-button"
+            href="https://maps.app.goo.gl/yTptK46hHgLCcbR8A?g_st=ic"
+            target="_blank"
+          >
+            📍 افتح الموقع على الخريطة →
+          </a>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     FINAL
+===================================================== -->
+
+      <section class="final">
+        <div class="final-content">
+          <div class="final-small">WE CAN'T WAIT TO SEE YOU</div>
+
+          <h2>وجودكم هو أجمل جزء من فرحتنا</h2>
+
+          <p>
+            نتمنى أن تشاركونا هذه اللحظة المميزة
+
+            <br />
+
+            ونحتفل سويًا ببداية حكايتنا
+          </p>
+
+          <div class="final-names">محمد & سوزان</div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     FOOTER
+===================================================== -->
+
+      <footer>
+        Made with
+
+        <span> ♥ </span>
+
+        for محمد & سوزان
+      </footer>
+    </main>
+
+    <script>
+      /* =========================================================
+   OPEN ENVELOPE
+========================================================= */
+
+      const envelope = document.getElementById("envelope");
+
+      const opening = document.getElementById("opening");
+
+      const website = document.getElementById("website");
+
+      envelope.addEventListener("click", function () {
+        /*
+            يبدأ فتح الظرف
+        */
+
+        envelope.classList.add("open");
+
+        /*
+            بعد ظهور الكارت
+            ننتقل للموقع
+        */
+
+        setTimeout(function () {
+          opening.classList.add("hide");
+
+          website.classList.add("show");
+
+          document.body.classList.remove("lock");
+
+          window.scrollTo(0, 0);
+        }, 2800);
+      });
+
+      /* =========================================================
+   COUNTDOWN
+========================================================= */
+
+      /*
+    9 أكتوبر 2026
+    استخدمنا 9:00 مساءً كتوقيت تقريبي
+    لأن الموعد المحدد هو "بعد العشاء"
+*/
+
+      const weddingDate = new Date("October 9, 2026 21:00:00").getTime();
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+
+        const distance = weddingDate - now;
+
+        if (distance <= 0) {
+          document.getElementById("days").innerText = "00";
+
+          document.getElementById("hours").innerText = "00";
+
+          document.getElementById("minutes").innerText = "00";
+
+          document.getElementById("seconds").innerText = "00";
+
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        );
+
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerText = String(days).padStart(
+          2,
+          "0",
+        );
+
+        document.getElementById("hours").innerText = String(hours).padStart(
+          2,
+          "0",
+        );
+
+        document.getElementById("minutes").innerText = String(minutes).padStart(
+          2,
+          "0",
+        );
+
+        document.getElementById("seconds").innerText = String(seconds).padStart(
+          2,
+          "0",
+        );
+      }
+
+      updateCountdown();
+
+      setInterval(updateCountdown, 1000);
+    </script>
+  </body>
+</html>
